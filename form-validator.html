@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validator</title>
+
+    <script type="text/javascript" src="assets/js/jquery-3.3.1.min.js" ></script>
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+
+    <script type="text/javascript" src="assets/js/script.js" ></script>
+
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+
+<main class="content">
+    <div class="form-validator">
+        <form >
+            <div class="form-group">
+                <label for="fname">First Name:</label>
+                <input type="text" class="form-control" id="fname">
+                <span class="error" ></span>
+            </div>
+
+            <div class="form-group">
+                <label for="lname">Last Name:</label>
+                <input type="text" class="form-control" id="lname">
+                <span class="error" ></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email">
+                <span class="error" ></span>
+            </div>
+
+            <div class="form-group">
+                <label for="uid">User Id:</label>
+                <input type="text" class="form-control" id="uid">
+                <span class="error" ></span>
+            </div>
+
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd">
+                <span class="error" ></span>
+            </div>
+
+            <div class="form-group">
+                <label for="confirm">Confirm Password:</label>
+                <input type="password" class="form-control" id="confirm">
+                <span class="error" ></span>
+            </div>
+
+            <button type="button" class="btn btn-success">Submit</button>
+        </form>
+    </div>
+</main>
+</body>
+</html>
