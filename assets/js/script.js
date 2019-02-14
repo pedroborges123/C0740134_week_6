@@ -71,16 +71,16 @@ function validate() {
             parent.children(".error").show();
         }
     }
+}
 
-    function finalValidate() {
+function finalValidate() {
 
-        var errors = jQuery(".error").filter(function () {
-            return jQuery(this).text() === "OK";
-        }).length;
-        if (errors === 6) {
-            jQuery("#errFinal").html("All the data you entered is correct!!!").show();
-        }
+    var errors = jQuery(".error").filter(function () {
+        return jQuery(this).text() === "OK";
+    }).length;
+    if (errors === 6) {
+        jQuery("#errFinal").html("All the data you entered is correct!!!").show();
+    }else{
+        validate();
     }
-
-
 }
