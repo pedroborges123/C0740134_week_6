@@ -42,11 +42,12 @@ function validate() {
     for (i in inputs) {
         var errMessage = errors[i];
         var parent = inputs[i].parent();
-        if (inputs[i].val() === "") {
+        var value = inputs[i].val();
+        if ( value == "") {
 
             parent.children(".error").html(errMessage).show();
 
-        } else if (i === 2) {
+        } else if (i == 2) {
             var atpos = inputs[i].val().indexOf("@");
             var dotpos = inputs[i].val().lastIndexOf(".");
 
@@ -57,11 +58,11 @@ function validate() {
                 parent.children(".error").html("OK").show();
             }
 
-        } else if (i === 5) {
+        } else if (i == 5) {
             var first = jQuery("#password").val();
             var second = jQuery("#confirm").val();
 
-            if (second !== first) {
+            if (second != first) {
                 parent.children(".error").html("Your passwords don't match!").show();
             } else {
                 parent.children(".error").html("OK").show();
@@ -76,10 +77,10 @@ function validate() {
 function finalValidate() {
 
     var errors = jQuery(".error").filter(function () {
-        return jQuery(this).text() === "OK";
+        return jQuery(this).text() == "OK";
     }).length;
     if (errors === 6) {
-        jQuery("#errFinal").html("All the data you entered is correct!!!").show();
+        jQuery(".errFinal").html("All the data you entered is correct!!!").show();
     }else{
         validate();
     }
